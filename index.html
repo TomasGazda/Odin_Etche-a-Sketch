@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./functions.js"></script>
+    <title>Etche a Sketch</title>
+</head>
+<body onload="createCanvas()";>
+    <section class = "header"><h2> Sketchbook</h2></section> 
+
+    <section class="content">
+        <div id ="controls">
+            <div id="panel">
+                <div>Select style:</div>
+                <div id="style_options">
+                    <div>
+                        <input type="radio" id='black' checked name='select_style' onclick="setStyle('1');" >
+                        <label for="black"> Black color</label>
+                    </div>
+                    <div>
+                        
+                        <input type="radio"  id='rainbow' name='select_style' onclick="setStyle('2');" >
+                        <label for="rainbow"> Random Color</label>
+                    </div>
+                    <div>
+                        <input type="radio" id='grey' name='select_style' onclick="setStyle('3');" >
+                        <label for="grey"> Shades of Grey</label>
+                    </div>
+                    <div>
+                        
+                        <input type="radio" id='own' name='select_style' onclick="setStyle('4');" >
+                        <label for="own"> Own Color</label>
+                        <input type="color" id='color_picker' name='select_style' value = 'black' onchange="setColor();" >
+                    </div>
+                    <div>
+                        <input type="radio" id='erase' name='select_style' onclick="setStyle('5');" >
+                        <label for="eraser"> Eraser</label>
+                        
+
+                    </div>
+                </div>
+                <div>
+                    <label for="slider"> Select sizing</label>
+                    <p id="slider_value"> </p>
+                    <input type="range" id='slider' min="5" max="100" value="50" onmouseup="createCanvas()">
+                    
+                </div>
+                <div id="buttons"></div>
+                    <button onclick="createCanvas();">Erase canvas</button>
+                    <button onclick="reset();">Reset</button>
+
+                
+
+            </div>
+
+        </div>
+        <div id ="sketchbook">
+            <div id="canvas"></div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>Copyright ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            Tomas Gazda
+          </p>
+          <a href="https://github.com/tomasGazda" target="_blank">
+            <i class="fab fa-github"></i
+          ></a>
+    </section>
+     
+</body>
+</html>
